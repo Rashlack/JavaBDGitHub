@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author 1795516
  */
-public class Professor {
+public class Professor extends Person{
     List<Student> Students = new ArrayList<Student>();
     String photoUrl;
     
@@ -24,5 +24,9 @@ public class Professor {
     
     public void setPhotoUrl(String photoName){
         this.photoUrl = "/photos/professors/mad/" + photoName;
+    }
+
+    public void isSupervisedBy(Student student) {
+        this.Students.add(student);
     }
 }

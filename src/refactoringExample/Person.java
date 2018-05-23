@@ -5,14 +5,16 @@
  */
 package refactoringExample;
 
+import java.util.Date;
+
 /**
  *
  * @author 1795516
  */
 public class Person {
-   int age;
+    int age;
+    Date dateBirth;
+    String firstName;
+    String lastName;
     
-    public void study(){
-        System.out.println("I study.");
-    } 
 }
