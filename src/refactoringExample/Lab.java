@@ -9,26 +9,9 @@ package refactoringExample;
  *
  * @author 1795516
  */
-public class Lab {
-    String idClass;
-    Integer capacity;
+public class Lab extends ClassRoom {
     Integer nbComputers;
     
-    public String getIdClass(){
-        return idClass;
-    }
-
-    public void setIdClass(String idClass) {
-        this.idClass = idClass;
-    }
-
-    public Integer getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(Integer capacity) {
-        this.capacity = capacity;
-    }
 
     public Integer getNbComputers() {
         return nbComputers;

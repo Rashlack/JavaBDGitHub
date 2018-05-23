@@ -17,14 +17,18 @@ public class Professor extends Person{
     String photoUrl;
     
     public Professor(String lastName, String firstName){
-        String employeeID = lastName.toUpperCase().trim().substring(1, 3)
-                + firstName.toUpperCase().trim().substring(1, 3);
+        String employeeID = formatEmployeID(lastName, firstName);
         System.out.println("New professor: " + employeeID);
+    }
+
+    private String formatEmployeID(String lastName1, String firstName1) {
+        return lastName1.toUpperCase().trim().substring(1, 3) + firstName1.toUpperCase().trim().substring(1, 3);
     }
     
     public void setPhotoUrl(String photoName){
         this.photoUrl = "/photos/professors/mad/" + photoName;
     }
+    
 
     public void isSupervisedBy(Student student) {
         this.Students.add(student);

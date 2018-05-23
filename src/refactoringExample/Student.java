@@ -15,15 +15,15 @@ public class Student extends Person {
     String studentId;
     
     public Student(String lastName, String firstName, Date dateBirth) {
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.dateBirth = dateBirth;
+        this.setLastName(lastName);
+        this.setFirstName(firstName);
+        this.setDateBirth(dateBirth);
         this.studentId = createStudentId(lastName, firstName, dateBirth);
     }
     
     public String createStudentId(String lName, String fName, Date date){
         String end = date.getYear() + "-" + date.getMonth();
-        return lName.substring(0, 3) + firstName.charAt(0) + end;
+        return lName.substring(0, 3) + getFirstName().charAt(0) + end;
     }
     
 
