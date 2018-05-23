@@ -5,6 +5,7 @@
  */
 package refactoringExample;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -22,7 +23,9 @@ public class Student extends Person {
     }
     
     public String createStudentId(String lName, String fName, Date date){
-        String end = date.getYear() + "-" + date.getMonth();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        String end = cal.get(Calendar.YEAR) + "-" + cal.get(Calendar.MONTH);
         return lName.substring(0, 3) + getFirstName().charAt(0) + end;
     }
     
