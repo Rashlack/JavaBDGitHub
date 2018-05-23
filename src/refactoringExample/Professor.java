@@ -5,10 +5,24 @@
  */
 package refactoringExample;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author 1795516
  */
 public class Professor {
+    List<Student> Students = new ArrayList<Student>();
+    String photoUrl;
     
+    public Professor(String lastName, String firstName){
+        String employeeID = lastName.toUpperCase().trim().substring(1, 3)
+                + firstName.toUpperCase().trim().substring(1, 3);
+        System.out.println("New professor: " + employeeID);
+    }
+    
+    public void setPhotoUrl(String photoName){
+        this.photoUrl = "/photos/professors/mad/" + photoName;
+    }
 }
