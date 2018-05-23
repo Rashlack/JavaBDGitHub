@@ -25,8 +25,11 @@ public class Professor extends Person{
         return lastName1.toUpperCase().trim().substring(1, 3) + firstName1.toUpperCase().trim().substring(1, 3);
     }
     
-    public void setPhotoUrl(String photoName){
-        this.photoUrl = "/photos/professors/mad/" + photoName;
+    public void callPhotoUrl(){
+        setPhotoUrl("index", "/photos/professors/mad/");
+    }
+    public void setPhotoUrl(String photoName, String photoPath){
+        this.photoUrl = photoPath + photoName;
     }
     
 
